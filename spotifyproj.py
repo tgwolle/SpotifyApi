@@ -18,5 +18,8 @@ headers={
   'Authorization': 'Bearer{token}'.format(token=access_token)
 }
 BASE_URL='https://api.spotify.com/v1/'
+track_id = '1XeExJaUcQYYBcFVuil3fP'
+r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
+r = r.json()
 
 
