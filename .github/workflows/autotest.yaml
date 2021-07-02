@@ -18,10 +18,10 @@ jobs:
 
       - name: Test with unittest
         run: |
-          python3 -m unittest autotest.py
+          python3 -m unittest APItest.py
       - name: Check code coverage                      
         run: |
-          python3 -m coverage run -m unittest autotest.py
+          python3 -m coverage run -m unittest APItest.py
           python3 -m coverage report
           python3 -m coverage html
           
