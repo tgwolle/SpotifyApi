@@ -28,12 +28,12 @@ BASE_URL = 'https://api.spotify.com/v1/'
 track_id = '1ivUwqx8QXtteFsxAOF5X1'
 r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
 r = r.json()
-df = pandas.DataFrame(list(r.items()), columns = ['Feature', 'Score'])
+df = pandas.DataFrame(list(r.items()), columns=['Feature', 'Score'])
 
 
 engine = create_engine('mysql://root:codio@localhost/Spotify')
 
-df.to_sql('Audio Features', con = engine, if_exists = 'replace', index = False)
+df.to_sql('Audio Features', con=engine, if_exists='replace', index=False)
 
 # print(r)
 # print(df)
