@@ -5,8 +5,8 @@ from sqlalchemy import create_engine
 import pandas
 
 
-CLIENT_ID = "b17aa41ea56f4d8e931b210c3a766e70"
-CLIENT_SECRET = "18563009e3fc439fa5f0bc18224f57a6"
+CLIENT_ID = ""
+CLIENT_SECRET = ""
 AUTH_URL = "https://accounts.spotify.com/api/token"
 auth_response = requests.post(AUTH_URL, {
   'client_id': CLIENT_ID,
